@@ -42,10 +42,6 @@ namespace TravelAPI.Controllers
     public void Post([FromBody] Review review)
     {
       _db.Review.Add(review);
-      Destination destination = _db.Destination.FirstOrDefault(dest => dest.DestinationId == review.DestinationId);
-      destination.Reviews.Add(review);
-      destination.Rating = (destination.Reviews.Sum(dest => Convert.ToInt32(dest.Rating))/destination.Reviews.Count);
-      _db.Entry(destination).State = EntityState.Modified;
       _db.SaveChanges();
     }
 

@@ -8,8 +8,8 @@ using TravelAPI.Models;
 namespace TravelAPI.Migrations
 {
     [DbContext(typeof(TravelAPIContext))]
-    [Migration("20200330204507_reviewRatingToString")]
-    partial class reviewRatingToString
+    [Migration("20200331161804_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
